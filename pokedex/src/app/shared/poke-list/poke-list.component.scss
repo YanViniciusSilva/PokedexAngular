@@ -1,0 +1,60 @@
+@import '../../../config-scss/rem-calc.scss';
+
+$padding: rem-calc(20);
+
+:host{
+  .pokemon{
+    display: flex;
+
+    width: 49%;
+    height: rem-calc(420);
+    background: var(--branco);
+    padding: $padding;
+    border-radius: rem-calc(10);
+
+    //o '&' coloca automaticamente o nome da função 'pai' no contexto da palavra 'status'
+    //o que chama a outra classe 'filho'
+    &_status{
+      h2{
+        font-size: rem-calc(22);
+        font-style: italic;
+        font-weight: 700;
+
+        margin-bottom: rem-calc(10);
+      }
+
+      ul{
+        display: flex;
+        flex-direction: column;
+
+        li{
+          background: var(--cinza);
+          font-size: rem-calc(10);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border-radius: rem-calc(100);
+
+          width: rem-calc(60);
+          margin-bottom: rem-calc(5);
+
+        }
+
+      }
+    }
+
+    &__image{
+      position:absolute;
+      height: rem-calc(90);
+      width: rem-calc(110);
+
+      right: $padding;
+      bottom: $padding;
+
+      background: url('../../../assets/bg/background-list-pokemons.svg') no-repeat;
+      
+    }
+  }
+}

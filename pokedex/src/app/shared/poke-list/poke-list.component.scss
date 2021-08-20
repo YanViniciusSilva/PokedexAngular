@@ -3,11 +3,18 @@
 $padding: rem-calc(20);
 
 :host{
-  .pokemon{
-    display: flex;
 
-    width: 49%;
-    height: rem-calc(420);
+  display: flex;
+  justify-content: space-between;
+
+  .pokemon{
+    position: relative;
+    display: flex;
+    // a função calc permite calcular valores para responsividade
+    //usando do o site https://nekocalc.com/px-to-rem-converter é possível converter pixel em rem, no caso 2.5rem = 40px
+    //assim é possível usar o rem ao invés de px e manter a responsividade já que a função "calc" e "rem-calc" são conflitantes
+    width: calc(49% - 2.5rem);
+    height: rem-calc(157 - 40);
     background: var(--branco);
     padding: $padding;
     border-radius: rem-calc(10);
@@ -47,6 +54,11 @@ $padding: rem-calc(20);
 
     &__image{
       position:absolute;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       height: rem-calc(90);
       width: rem-calc(110);
 
@@ -54,7 +66,10 @@ $padding: rem-calc(20);
       bottom: $padding;
 
       background: url('../../../assets/bg/background-list-pokemons.svg') no-repeat;
-      
+
+      img{
+        width: rem-calc(80);
+      }
     }
   }
 }

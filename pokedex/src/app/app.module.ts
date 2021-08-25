@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 //modules adicionados/criados
 import { PagesModule } from './pages/pages.module';
 import { RoutingModule } from './pages/routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 //components
 
@@ -20,7 +22,11 @@ import { RoutingModule } from './pages/routing.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    RoutingModule
+    RoutingModule,
+    /* httpClientModule é uma ferramente própria do Angular para conexões externas do back-end
+    No nosso caso aqui vai ser a PokeApi*/
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

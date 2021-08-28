@@ -1,19 +1,24 @@
-<a class="pokemon">
-  <section class="pokemon_status">
-    <h2>
-      Bulbasaur
-    </h2>
-    <ul>
-      <li>Grass</li>
-      <li>Poison</li>
-    </ul>
-  </section>
+<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+  <a class="pokemon" *ngIf="pokemon.status">
+     <!-- o ngIf serve para criar uma condição de verificação para não precisar ficar colocando
+    ? pelo código, mas por via das dúvidas, vou deixar os dois registrados ^^ -->
+    <section class="pokemon_status" >
+      <h2>
+        {{pokemon.name}}
+      </h2>
+      <ul>
+        <!-- o ponto de ? server para adicionar uma verificação para evitar que o navegador reconheça
+        o valor da api como undefined-->
+        <li *ngFor = "let value of pokemon?.status?.types">{{value.type.name}}</li>
+      </ul>
+    </section>
 
-  <section class="pokemon__image">
+    <section class="pokemon__image">
 
-    <img src="assets/pokemon.png" alt="">
+      <img [src]="pokemon.status.sprites.other.dream_world.front_default"
+      alt="pokemon.name">
 
-  </section>
-</a>
-
+    </section>
+  </a>
+</ng-template>
 

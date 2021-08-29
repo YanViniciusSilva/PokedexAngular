@@ -15,10 +15,12 @@ export class PokeListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.pokeApiService.apiListAllPokemons. subscribe(
+    this.pokeApiService.apiListAllPokemons.subscribe(
       res => {
-      this.getAllPokemons = res.results
-      });
+      this.getAllPokemons = res.results;
+      console.log(this.getAllPokemons);
+      }
+    );
   }
 
 }

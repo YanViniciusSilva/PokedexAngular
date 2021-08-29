@@ -22,7 +22,8 @@ $padding: rem-calc(20);
     padding: $padding;
     margin-bottom: rem-calc(20);
     border-radius: rem-calc(10);
-
+    text-decoration: none;
+    color: var(--primary-color);
     //o '&' coloca automaticamente o nome da função 'pai' no contexto da palavra 'status'
     //o que chama a outra classe 'filho'
     &_status{
@@ -72,7 +73,7 @@ $padding: rem-calc(20);
       background: url('../../../assets/bg/background-list-pokemons.svg') no-repeat;
 
       img{
-        width: rem-calc(65);
+        width: rem-calc(150);
       }
     }
   }

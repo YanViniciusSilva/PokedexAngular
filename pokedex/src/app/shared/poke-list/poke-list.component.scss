@@ -3,6 +3,7 @@
 $padding: rem-calc(20);
 
 :host{
+.listagem{
 
   display: flex;
   justify-content: space-between;
@@ -77,4 +78,5 @@ $padding: rem-calc(20);
       }
     }
   }
+}
 }

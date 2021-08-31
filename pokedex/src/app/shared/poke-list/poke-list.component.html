@@ -1,3 +1,7 @@
+<!-- Barra de pesquisa -->
+<poke-search ></poke-search>
+
+<section class="listagem">
 <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
   <a [routerLink]="['details', pokemon.status.id]" routerLinkActive="router-link-active"  class="pokemon" *ngIf="pokemon.status">
      <!-- o ngIf serve para criar uma condição de verificação para não precisar ficar colocando
@@ -21,4 +25,4 @@
     </section>
   </a>
 </ng-template>
-
+</section>

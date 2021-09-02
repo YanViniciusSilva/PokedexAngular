@@ -66,15 +66,16 @@ $padding: rem-calc(20);
       justify-content: center;
 
       height: rem-calc(90);
-      width: rem-calc(110);
+      width: rem-calc(120);
 
       right: $padding;
       bottom: $padding;
 
-      background: url('../../../assets/bg/background-list-pokemons.svg') no-repeat;
+      background: url('../../../assets/bg/icons8-pokebola-100.png') no-repeat;
 
       img{
-        width: rem-calc(150);
+        width: rem-calc(180);
+
       }
     }
   }

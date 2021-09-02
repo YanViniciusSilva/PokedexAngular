@@ -8,6 +8,7 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
 })
 export class PokeListComponent implements OnInit {
 
+  private setAllPokemons: any;
   public getAllPokemons: any;
 
   constructor(
@@ -17,10 +18,25 @@ export class PokeListComponent implements OnInit {
   ngOnInit(): void {
     this.pokeApiService.apiListAllPokemons.subscribe(
       res => {
-      this.getAllPokemons = res.results;
-      console.log(this.getAllPokemons);
+      this.setAllPokemons = res.results;
+      this.getAllPokemons = this.setAllPokemons;
+      //console.log(this.setAllPokemons);
       }
     );
+  }
+
+  //funcionalidade que vai resgatar o valor escrito na barra de search e vai executar um evento
+  public getsearch(value: string){
+    //console.log(value);
+    //filter é uma função própria do javaScript
+    const filter = this.setAllPokemons.filter((res: any) => {
+      /*o return abaixo faz uma verificação, ele verifica se o nome que foi escrito corresponde a algum
+      nome da lista de pokemons, o toLowerCase vai fazer com que o valor escrito mesmo que seja com letras
+      maiúsculas seja convertido para letras minúsculas, já que os nomes da api estão todos minúsculos*/
+      return !res.name.indexOf(value.toLowerCase());
+    });
+
+    this.getAllPokemons = filter;
   }
 
 }

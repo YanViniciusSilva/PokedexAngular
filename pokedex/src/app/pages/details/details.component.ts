@@ -10,10 +10,10 @@ import { forkJoin } from 'rxjs';
 })
 export class DetailsComponent implements OnInit {
   // url inserida na variável para usar com o metodo apiGetPokemons
-  private urlPokemon: string = 'http://pokeapi.co/api/v2/pokemon';
-  private urlName: string = 'http://pokeapi.co/api/v2/pokemon-species';
+  private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
+  private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
 
-
+  public pokemon: any;
   // função de rotas, ferramenta própria do Angular
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,10 +26,10 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.pokemon;
+    this.getPokemon;
   }
 
-  get pokemon(){
+  get getPokemon(){
     //puxa o id dos pokemons da página principal
     const id = this.activatedRoute.snapshot.params['id'];
     //puxa as informações da api a partir de url's
@@ -41,9 +41,10 @@ export class DetailsComponent implements OnInit {
     de criar vários subscribe para exibir as informações aos poucos */
     return forkJoin([pokemon, name]).subscribe(
       res => {
+        this.pokemon = res;
         console.log(res);
       }
-    )
+    );
 
   }
 }

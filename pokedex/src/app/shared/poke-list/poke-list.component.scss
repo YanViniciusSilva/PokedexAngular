@@ -22,18 +22,21 @@ $padding: rem-calc(20);
     background: var(--branco);
     padding: $padding;
     margin-bottom: rem-calc(20);
-    border-radius: rem-calc(10);
+    border-radius: rem-calc(5);
     text-decoration: none;
     color: var(--primary-color);
+
     //o '&' coloca automaticamente o nome da função 'pai' no contexto da palavra 'status'
     //o que chama a outra classe 'filho'
     &_status{
       h2{
-        font-size: rem-calc(22);
-        font-style: italic;
+        font-size: rem-calc(16);
+        //font-style: italic;
         font-weight: 700;
         text-transform: capitalize;
         margin-bottom: rem-calc(10);
+        font-family: 'Press Start 2P', cursive;;
+
       }
 
       ul{
@@ -42,7 +45,8 @@ $padding: rem-calc(20);
 
         li{
           background: var(--cinza);
-          font-size: rem-calc(10);
+          font-size: rem-calc(8);
+          font-family: 'Press Start 2P', cursive;;
 
           display: flex;
           justify-content: center;

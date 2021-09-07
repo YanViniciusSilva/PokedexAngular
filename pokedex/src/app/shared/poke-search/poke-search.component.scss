@@ -15,11 +15,13 @@
       width: 95%;
       background: none;
       border:none;
-      font-size: rem-calc(18);
+      font-size: rem-calc(14);
       color: var(--branco);
+      font-family: 'Press Start 2P', cursive;;
+
 
       &::placeholder{
-        color: var(--branco);
+        color: rgba(255,255, 255, 0.3);
       }
     }
 

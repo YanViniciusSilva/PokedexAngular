@@ -1,3 +1,6 @@
+
+<ng-template [ngIf]="isLoading">
+
 <!-- Barra de pesquisa -->
 <poke-search (emmitSearch)="getsearch($event)"></poke-search>
 
@@ -26,3 +29,10 @@
   </a>
 </ng-template>
 </section>
+</ng-template>
+
+<img src="assets/error.png"
+alt="Erro ao carregar mostragem dos pokemons"
+width="100%"
+*ngIf="apiError"
+/>

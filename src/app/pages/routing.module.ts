@@ -4,17 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 //components criados
 import { HomeComponent } from './home/home.component';
-import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
   },
-  {
-    path: '',
-    component: DetailsComponent
-  }
 ];
 
 @NgModule({

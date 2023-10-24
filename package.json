@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production && firebase deploy --only hosting:pokedexangularproject"
+    "deploy": "ng build --configuration development && firebase deploy --only hosting:pokedexangularproject"
   },
   "private": true,
   "dependencies": {

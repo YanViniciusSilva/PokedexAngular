@@ -27,8 +27,7 @@ export class DetailsComponent implements OnInit {
 
   //ngOnInit é o local onde você insere todos os métodos e funções que você deseja que inicie assim que a página abrir
   ngOnInit(): void {
-
-
+    console.log(this.isLoading)
     this.getPokemon;
   }
 

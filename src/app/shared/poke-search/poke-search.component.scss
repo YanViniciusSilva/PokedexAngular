@@ -11,14 +11,17 @@
 
     border-radius: rem-calc(5);
 
+    @media (max-width: 400px) {
+      margin: 0 0.5rem;
+    }
+
     input{
       width: 95%;
       background: none;
       border:none;
       font-size: rem-calc(14);
       color: var(--branco);
-      font-family: 'Press Start 2P', cursive;;
-
+      font-family: 'Press Start 2P', cursive;
 
       &::placeholder{
         color: rgba(255,255, 255, 0.3);
